@@ -1,0 +1,122 @@
+body {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 18px;
+    margin: 25px;
+}
+
+label {
+    font-weight:bolder;
+    padding-right: 1em;
+    display: inline-block;
+    margin: 5px 5px 5px 0px;
+    width: 50px;
+    vertical-align: top;
+}
+
+.cb label {
+    width: auto;
+}
+
+.rb label:nth-of-type(1n+2) {
+    width: 100px;
+}
+
+.cb input,
+.rb input {
+    margin-right: 7px;
+    width: unset;
+}
+.block {
+    display:block;
+    margin: 10px;
+    padding: 2px;
+}
+
+select {
+    padding: 0;
+}
+
+option {
+    width: 236px; 
+    margin-right: 0;
+    padding-right: 0;
+}
+
+input {
+    width: 250px;
+}
+
+input,select,textarea {
+    border-radius: 3px;
+    border:1px solid;
+    padding: 3px;
+    font-size: 1.2em;
+}
+
+.buttons,
+fieldset {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin:15px;
+}
+
+legend {
+    font-size: 1.4rem;
+    font-weight: 700;
+    border: 1px solid #eee;
+}
+
+textarea {
+    width: 500px;
+    height: 200px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    padding: 5px;
+    margin: 25px;
+    border: 2px solid #999;
+    border-radius: 3px;
+    font-size: 1.3rem;
+}
+
+:required {
+    border-color: #000;
+}
+
+input:invalid {
+    border-color: #f00;
+}
+
+input:invalid + span, select:invalid + span, .char-count-error-msg-invalid {
+    display: inline;
+}
+
+input:valid {
+    border-color: #082;
+}
+
+input:valid + span, select:valid + span, .char-count-error-msg-valid {
+    display: none;
+}
+
+input,textarea {
+    border-color: #aaa;
+}
+
+.error {
+    font-style: italic;
+    color: #777;
+    font-size: smaller;
+}
+
+*:invalid + .error{
+    display: block;
+}
+
+img {
+    box-shadow: 0 0 15px #000;
+}

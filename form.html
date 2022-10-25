@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <link href="form.css" rel="stylesheet">
+    <script src="form.js" defer></script>
+</head>
+
+<body>
+    <h1>Form</h1>
+    <form action="https://www.nashuaweb.net/csci201n/submit-json.php" method="post" id="lab7-form">
+        <fieldset>
+            <legend>Fieldset</legend>
+            <!-- flower text input -->
+            <div class="block">
+                <label for="flower">Flower</label>
+                <input type="text" id="flower" name="flower" pattern="\w[\w ',.&]{3,64}">
+                <span id="flower-error-msg" class="error">Not a valid flower name</span>
+            </div>
+            <!-- domain text input -->
+            <div class="block">
+                <label for="domain">Domain</label>
+                <input type="text" id="domain" name="domain" pattern="(.+)\.(.+){3,64}">
+                <span id="domain-error-msg" class="error">Not a valid domain name</span>
+            </div>
+            <!-- number input -->
+            <div class="block">
+                <label for="number">Number</label>
+                <input type="number" id="number" name="quantity" min="0" max="131">
+                <span id="number-error-msg" class="error">Not a valid number</span>
+            </div>
+            <!-- select -->
+            <div class="block">
+                <label for="colors">Colors</label>
+                <select id="colors" name="colors[]" multiple required>
+                        <option value="red">red</option>
+                        <option value="blue">blue</option>
+                        <option value="yellow">yellow</option>
+                        <option value="orange">orange</option>
+                        <option value="white">white</option>
+                        <option value="pink">pink</option>
+                        <option value="purple">purple</option>
+                    </select>
+                <span id="colors-error-msg" class="error">Please choose one or more colors</span>
+            </div>
+            <!-- checkbox input -->
+            <div class="block cb">
+                <label>Option <input type="checkbox" id="option" name="option"></label>
+            </div>
+            <!-- radio input -->
+            <div class="block rb">
+                <label>Answer</label>
+                <label><input type="radio" name="rb-answer" value="no">No</label>
+                <label><input type="radio" name="rb-answer" value="maybe">Maybe</label>
+                <label><input type="radio" name="rb-answer" value="yes">Yes</label>
+            </div>
+            <!-- textarea -->
+            <div class="block">
+                <label for="story">Story</label>
+                <textarea name="story" minlength="100" maxlength="500" id="story"></textarea>
+                <div class="progress-bar">
+                    <span id="char-count">Character Count: <output id="txtareaValCount">0</output></span>
+                    <progress id="form-progress" max="100" value="0">0%</progress>
+                    <span id="char-count-error-msg" class="char-count-error-msg-invalid">Character Count Too Low</span>
+                </div>
+            </div>
+        </fieldset>
+        <!-- buttons -->
+        <div class="buttons">
+            <button type="button" value="button" id="go-btn">Go</button>
+            <button type="reset" value="reset">Reset</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
